@@ -1,6 +1,6 @@
-## /climate-profile-full/server
+## /assets-cms/server
 
-Server-side APIs and utilities for the **climate-profile-full** app.
+Server-side APIs and utilities for the **assets-cms** app.
 
 ### Dependencies
 
@@ -96,43 +96,6 @@ The following steps and instructions requires login to Firebase CLI. Read on the
 4. (Optional) Run the command to create a **.rules** configuration file in your project directory.<br>
 `firebase init storage`
 
-### Firebase Hosting
-
-Deploy website to Multiple Target Sites under a Firebase Project Hosting
-
-1. Add a Firebase Web App to your Firebase Project under **Project Settings** -> **Add App** -> **Add Firebase to your app**
-   - *Select a platform to get started*: Choose Web
-2. Create a main Firebase Hosting website in the project.
-   - Select the project's **Hosting** tab in the Firebase Web console
-   - Press the **Add another site** button to create a Hosting website (for example, let's use  `"my-website"`)
-      - Take note of this Hosting site's name `"my-website"`
-   - Associate a `"blog"` (alias) deploy target to the `"my-website"` site:<br>
-      - `firebase target:apply hosting blog my-website`
-3. Update the local project's **firebaserc.json** file with the new target(s) and alias(es):
-     ```
-     {
-       "hosting": [{
-         "target": "blog",  // "blog" is the applied target name for the Hosting site "my-website""
-         "public": "blog/dist",  // contents of this folder are deployed to the site "my-website"
-          // ...
-       },
-       {
-         "target": "app",  // "app" is the applied target name for the Hosting site "myapp-app"
-         "public": "app/dist",  // contents of this folder are deployed to the site "myapp-app"
-          // ...
-         "rewrites": [...]  // You can define specific Hosting configurations for each site
-       }
-      ]
-     }
-     ```
-4. Serve the firebase hosting website locally.
-   - `firebase serve` - Launches all websites
-   - `firebase serve --only hosting:TARGET_NAME` - deploy only a specified site
-5. Deploy.
-   - `firebase deploy` - deploys all sites
-   - `firebase deploy --only hosting:TARGET_NAME` - deploy only a specified site
-
-
 ## Firebase CLI Quick Usage Reference
 
 - To install Firebase CLI (using NodeJS), run:<br>
@@ -186,5 +149,5 @@ Additionally, hard-code an existing Firebase user account's Auth ID in the `AUTH
 
 <sup>[[1]](https://firebase.google.com/docs/cli#windows-npm)</sup> Firebase CLI Installation
 
-@weaponsforge<br>
-20230427
+@acaptutorials<br>
+20230520

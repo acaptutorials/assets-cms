@@ -1,4 +1,4 @@
-## climate-profile-full
+## assets-cms
 
 Testing display of all related content based on a URL query string.
 
@@ -15,7 +15,7 @@ Testing display of all related content based on a URL query string.
 ### Online Demo
 
 #### Production App
-https://weaponsforge.github.io/climate-profile-full/
+https://acaptutorials.github.io/assets-cms/
 
 #### Development App
 https://climate-profile-dev.web.app/
@@ -69,5 +69,5 @@ password: useruser
 4. Export the static website.<br>
 `npm run export`
 
-@weaponsforge<br>
+@acaptutorials<br>
 2022112
