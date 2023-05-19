@@ -4,16 +4,12 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 
-import CountryList from '../layout/countrylist'
 import SmartNotification from '@/components/common/ui/smartnotification'
-
-import countries from '@/data/countries'
 import styles from './styles'
 
 function StaticPublicPostComponent ({
   country,
-  post,
-  handleSelectCountry
+  post
 }) {
   return (
     <Container maxWidth='lg'>
@@ -23,11 +19,6 @@ function StaticPublicPostComponent ({
               Climate Profile
             {country !== '' && ` - ${country}`}
           </Typography>
-
-          <CountryList
-            countries={countries}
-            handleSelectCountry={handleSelectCountry}
-          />
         </Grid>
 
         <Grid item xs={12} sm={12}>

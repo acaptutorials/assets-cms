@@ -30,7 +30,7 @@ function LoginComponent ({ signIn, loading = false }) {
           />
 
           <h1>
-            Login!
+            Login
           </h1>
 
           <form onSubmit={signIn}>

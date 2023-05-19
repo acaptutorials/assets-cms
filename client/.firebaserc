@@ -1,17 +1,12 @@
 {
   "projects": {
-    "default": "climate-profile-app"
+    "default": "assets-cms"
   },
   "targets": {
-    "climate-profile-app": {
-      "hosting": {
-        "dev": [
-          "climate-profile-dev"
-        ]
-      },
+    "assets-cms": {
       "storage": {
         "dev": [
-          "climate-profile-app.appspot.com"
+          "assets-cms.appspot.com"
         ]
       }
     }

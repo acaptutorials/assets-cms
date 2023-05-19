@@ -6,16 +6,13 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 
 import AppCard from '@/components/common/ui/appcard'
-import CountryList from '@/domain/profile/countrylist'
 import SmartNotification from '@/components/common/ui/smartnotification'
 
 import { ADAPTER_STATES } from '@/store/constants'
 import styles from './styles'
 
 function PublicPostComponent ({
-  country,
-  countries,
-  handleSelectCountry
+  country
 }) {
   const { post, status } = useSelector(state => state.posts)
 
@@ -31,11 +28,6 @@ function PublicPostComponent ({
                 Climate Profile
               {country !== '' && ` - ${country}`}
             </Typography>
-
-            <CountryList
-              countries={countries}
-              handleSelectCountry={handleSelectCountry}
-            />
           </Grid>
 
           <Grid item xs={12} sm={12}>
