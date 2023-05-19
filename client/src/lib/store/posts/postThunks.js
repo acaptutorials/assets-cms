@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { postsLoading } from './postSlice'
 import {
   createPost, getPosts, getPost, deletePost, updatePost,
-  getPublishedPostsByCountry
+  getPublishedPosts
 } from '@/services/posts'
 import { ADAPTER_STATES } from '@/store/constants'
 import { timestampToDateString } from '@/utils/firestoreutils'
@@ -128,10 +128,10 @@ export const _updatePost = createAsyncThunk('posts/update', async (post, thunkAP
 })
 
 /**
- * Fetch published Posts by country thunk.
- * @params {String} country - Country name.
+ * Fetch published Posts by ID thunk.
+ * @params {String} docId - Post document ID.
  */
-export const _getPublishedPostByCountry = createAsyncThunk('posts/list/country', async (country, thunkAPI) => {
+export const _getPublishedPostById = createAsyncThunk('posts/list/id', async (docId, thunkAPI) => {
   const { status } = thunkAPI.getState().posts
 
   if (status === ADAPTER_STATES.PENDING) {
@@ -140,7 +140,7 @@ export const _getPublishedPostByCountry = createAsyncThunk('posts/list/country',
 
   try {
     thunkAPI.dispatch(postsLoading(thunkAPI.requestId))
-    const response = await getPublishedPostsByCountry(country)
+    const response = await getPublishedPosts(docId)
 
     if (response.length === 0) {
       return thunkAPI.rejectWithValue('No Post/s fetched.')

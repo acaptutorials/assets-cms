@@ -8,7 +8,6 @@ import SmartNotification from '@/components/common/ui/smartnotification'
 import styles from './styles'
 
 function StaticPublicPostComponent ({
-  country,
   post
 }) {
   return (
@@ -16,8 +15,7 @@ function StaticPublicPostComponent ({
       <Grid container sx={styles.container}>
         <Grid item xs={12} sx={{ marginBottom: '48px' }}>
           <Typography variant="h3">
-              Climate Profile
-            {country !== '' && ` - ${country}`}
+              Post Content
           </Typography>
         </Grid>
 
