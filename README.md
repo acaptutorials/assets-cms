@@ -16,9 +16,8 @@ This project will also serve as a Content Management System (CMS) for tracking a
 4. firebase v9.18.0
 5. firebase-admin v11.5.0
 
-### Online Demo
+### Online App
 
-#### Production App
 https://acaptutorials.github.io/assets-cms/
 
 ## Installation
