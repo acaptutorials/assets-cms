@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { _getPublishedPostByCountry } from '@/store/posts/postThunks'
+import { _getPublishedPostById } from '@/store/posts/postThunks'
 import { MESSAGE_SEVERITY, notificationReceived } from '@/store/app/appSlice'
 
 const defaultState = { loading: false, error: '' }
@@ -14,7 +14,7 @@ export default function useFetchPublicPost (country = null) {
     if (country) {
       setState(prev => ({ ...prev, error: '', loading: true }))
 
-      dispatch(_getPublishedPostByCountry(country))
+      dispatch(_getPublishedPostById(country))
         .unwrap()
         .then(() => {
           setState(prev => ({ ...prev, loading: false }))

@@ -1,7 +1,7 @@
 import { PublicPost } from '@/features/posts'
 
-function CCProfiles () {
+function Post () {
   return (<PublicPost />)
 }
 
-export default CCProfiles
+export default Post

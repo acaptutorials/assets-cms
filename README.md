@@ -1,6 +1,7 @@
-## climate-profile-full
+## assets-cms
 
-Dynaimc widgets/apps for external website embedding on Google Sites.
+Dynamic widgets/apps for external website embedding on Google Sites.<br>
+This project will also serve as a Content Management System (CMS) for tracking and hosting common ACAP assets.
 
 ## Requirements
 
@@ -15,24 +16,14 @@ Dynaimc widgets/apps for external website embedding on Google Sites.
 4. firebase v9.18.0
 5. firebase-admin v11.5.0
 
-### Online Demo
+### Online App
 
-#### Production App
-https://weaponsforge.github.io/climate-profile-full/
-
-#### Development App
-https://climate-profile-dev.web.app/
-
-```
-EXAMPLE USER (Development App Only)
-email: user@gmail.com
-password: useruser
-```
+https://acaptutorials.github.io/assets-cms/
 
 ## Installation
 
 1. Clone this repository.<br>
-`git clone https://github.com/weaponsforge/climate-profile-full.git`
+`git clone https://github.com/acaptutorials/assets-cms.git`
 
 2. Install dependencies in the **/client** and **/server** directories.<br>
    ```
@@ -47,5 +38,5 @@ password: useruser
 
 2. Follow the instructions in the README files inside the **/client** and **/server** directories for more information on configuring and using the client and server apps.
 
-@weaponsforge<br>
+@acaptutorials<br>
 20230326
